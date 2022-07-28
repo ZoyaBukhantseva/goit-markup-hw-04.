@@ -94,6 +94,7 @@ margin-left: auto;}
   margin-left: 50px; ;
 }
 
+
 .header-contact  {
  display: block;
  padding-top: 32px;
@@ -111,7 +112,9 @@ margin-left: auto;}
   color: var(--acent-color);
  }
 
-
+.mail-icon{
+  fill: currentColor
+}
 .container {
   width: 1200px;
   margin-left: auto;
@@ -125,7 +128,17 @@ margin-left: auto;}
    background-color:var(--bgr-color-acent);
    padding-top: 200px;
    padding-bottom: 200px;
-  }
+   background-image:linear-gradient(
+    rgba(47, 48, 58, 0.4),
+   rgba(47, 48, 58, 0.4)
+   ),
+    url(../images/hero-bg.jpg);
+    max-width: 1600px;
+    height: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    background-position: center;
+}
   .hero>.container{
     
     text-align: center;
@@ -181,10 +194,17 @@ margin-left: auto;}
   font-style: normal;
   color:var(--main-text-color);
 }
-.peculiarities-item{
-
+.peculiarities-item::before {
+  content: '';
+ 
+  height: 120px;
+background-color:#F5F4FA;
+  border-radius: 4px;
+display: block;
+margin-bottom: 30px;
 }
-.peculiarities p {
+
+.peculiarities-item >p {
 
 
   font-family: "Roboto";
@@ -196,7 +216,7 @@ margin-left: auto;}
   color: var(--second-text-color);
 }
 .about-tittle,
-.team-tittle {
+.team-tittle,.clients-tittle {
   margin-bottom: 50px;
 
   font-family: 'Roboto';
@@ -247,7 +267,7 @@ margin-left: auto;}
   border-radius: 0px 0px 4px 4px;;
 }
 .team-item p {
-  padding-bottom: 30px;
+  padding-bottom: 16px;
 
   text-align: center;
     font-style: normal;
@@ -268,6 +288,64 @@ margin-left: auto;}
     line-height: 1.19;
     text-align: center;
     letter-spacing: 0.03em;
+}
+.team-soc{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.soc-icon{
+  fill: #AFB1B8;
+}
+.team-soc-link{
+  width: 44px;
+  height: 44px;
+ border-radius:  50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background-color:transparent
+}
+.team-soc-link:hover, .team-soc-link:focus{
+  background-color: #2196f3;
+}
+
+.team-soc-link:hover .soc-icon{
+  fill: #fff;
+}
+
+.team-soc-link:focus .soc-icon {
+  fill: #fff;
+}
+.clients{
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients-list{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.client-item {
+  padding: 16px 32px;
+  width: 170px;
+  height: 92px;
+  background-color: #F5F5F5;;
+border: 1px solid #AFB1B8;
+  border-radius: 4px;
+}
+.client-item:hover{
+  border: 1px solid #2196F3;
+}
+
+.client-item:hover .client-icon{
+  fill:#2196F3; ;
+}
+.client-icon{
+  fill: #AFB1B8;
 }
 .footer {
   background-color: var(--bgr-color-acent);
@@ -313,6 +391,34 @@ a[href=" https://goo.gl/maps/LfRihioMRKPNniMt5"]
 }
 a[href=" https://goo.gl/maps/LfRihioMRKPNniMt5"]:hover{
   color:var(--acent-color);
+}
+.footer-soc-list{
+  display: flex;
+  justify-content: start;
+  gap: 10px;
+}
+.footer-soc-link{
+  
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.soc>h3{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+.box-contacts{
+display: flex;
+align-items:baseline;
 }
 .portfolio-list{
   padding-top: 94px;
